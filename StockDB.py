@@ -75,7 +75,7 @@ with con:
 			# print cur.lastrowid
 			id_val = id_val + 1
 
-			sleep(60)
+			sleep(900)
 		else:
 			print "The markets are closed."
 			sleep(1)
