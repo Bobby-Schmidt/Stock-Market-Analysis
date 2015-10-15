@@ -15,9 +15,9 @@ ticker_sym_egy = 'EGY'
 ticker_sym_vde = 'VDE'
 ticker_sym_tsla = 'TSLA'
 
-id_val = 0
-opening_bell = datetime.datetime(2015, 10, 14, 8, 30)
-closing_bell = datetime.datetime(2015, 10, 14, 3, 30)
+id_val = 58
+# opening_bell = datetime.datetime(2015, 10, 14, 8, 30)
+closing_bell = datetime.datetime(2015, 10, 15, 3, 30)
 
 # id_val = cur.execute("SELECT id FROM Vaalco WHERE id = (SELECT max(id) FROM Vaalco);")
 # print id_val
@@ -27,7 +27,7 @@ with con:
 	while True:
 		
 		curr_time = datetime.datetime.now()
-		if opening_bell < curr_time or closing_bell > curr_time:
+		if closing_bell > curr_time:
 			cur = con.cursor()
 
 			quote_time = strftime("%Y-%m-%d %H:%M:%S")
